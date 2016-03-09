@@ -45,6 +45,7 @@ public class AAVDFragment extends Fragment {
         vectors.add(new Vector(getActivity(), "Views", R.drawable.avd_views, R.drawable.avd_views));
         vectors.add(new Vector(getActivity(), "Followers", R.drawable.avd_followers, R.drawable.avd_followers));
         vectors.add(new Vector(getActivity(), "Heart Beat", R.drawable.avd_likes, R.drawable.avd_likes));
+        vectors.add(new Vector(getActivity(), "Plus/X", R.drawable.avd_x_to_plus, R.drawable.avd_plus_to_x));
         return vectors;
     }
 
