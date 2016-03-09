@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.commit451.aavd.sample"
-        minSdkVersion 11
+        minSdkVersion 21
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -35,4 +35,6 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:23.2.0'
     compile 'com.android.support:design:23.2.0'
     compile 'com.jakewharton:butterknife:7.0.1'
+    compile project(':aavd')
+    compile project(':aavd-path')
 }

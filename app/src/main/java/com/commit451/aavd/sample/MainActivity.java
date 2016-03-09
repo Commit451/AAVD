@@ -1,12 +1,13 @@
 package com.commit451.aavd.sample;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-
-import java.util.ArrayList;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -15,10 +16,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Bind(R.id.toolbar)
     Toolbar mToolbar;
-    @Bind(R.id.list)
-    RecyclerView mList;
-
-    VectorAdapter mAdapter;
+    @Bind(R.id.tabs)
+    TabLayout mTabLayout;
+    @Bind(R.id.viewpager)
+    ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,14 +27,42 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         mToolbar.setTitle(R.string.app_name);
-        mList.setLayoutManager(new LinearLayoutManager(this));
-        mAdapter = new VectorAdapter(getVectors());
-        mList.setAdapter(mAdapter);
+        Adapter adapter = new Adapter(getSupportFragmentManager());
+        mViewPager.setAdapter(adapter);
+        mTabLayout.setupWithViewPager(mViewPager);
     }
 
-    private ArrayList<Vector> getVectors() {
-        ArrayList<Vector> vectors = new ArrayList<>();
-        vectors.add(new Vector(this, "Play/Reset", R.drawable.fab_play_to_reset_animated_vector, R.drawable.fab_reset_to_play_animated_vector));
-        return vectors;
+    static class Adapter extends FragmentPagerAdapter {
+
+        public Adapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            switch (position) {
+                case 0:
+                    return new AAVDFragment();
+                case 1:
+                    return new AAVDPathFragment();
+            }
+            return null;
+        }
+
+        @Override
+        public int getCount() {
+            return 2;
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            switch (position) {
+                case 0:
+                    return "AAVD";
+                case 1:
+                    return "AAVD Path";
+            }
+            return null;
+        }
     }
 }

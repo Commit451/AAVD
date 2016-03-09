@@ -1,1 +1,1 @@
-include ':app', ':aavd'
+include ':app', ':aavd', ':aavd-path'

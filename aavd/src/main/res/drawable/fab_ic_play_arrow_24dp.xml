@@ -9,7 +9,7 @@
 
         <path
             android:name="arrow tail"
-            android:strokeColor="#000000"
+            android:strokeColor="#FFFFFFFF"
             android:strokeWidth="2"
             android:trimPathEnd="0"
             android:pathData=
@@ -23,7 +23,7 @@
             android:scaleX="1"
             android:scaleY="1">
             <path
-                android:fillColor="#FF000000"
+                android:fillColor="#FFFFFFFF"
                 android:pathData="M8,5v14l11,-7z"/>
         </group>
     </group>
