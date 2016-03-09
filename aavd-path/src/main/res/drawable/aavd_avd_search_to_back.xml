@@ -17,22 +17,22 @@
 
 <animated-vector
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:drawable="@drawable/searchback_search">
+    android:drawable="@drawable/aavd_searchback_search">
 
     <target
         android:name="stem"
-        android:animation="@animator/searchback_stem_search_to_back" />
+        android:animation="@animator/aavd_searchback_stem_search_to_back" />
 
     <target
         android:name="search_circle"
-        android:animation="@animator/searchback_hide_circle" />
+        android:animation="@animator/aavd_searchback_hide_circle" />
 
     <target
         android:name="arrow_head_top"
-        android:animation="@animator/searchback_show_arrow_head" />
+        android:animation="@animator/aavd_searchback_show_arrow_head" />
 
     <target
         android:name="arrow_head_bottom"
-        android:animation="@animator/searchback_show_arrow_head" />
+        android:animation="@animator/aavd_searchback_show_arrow_head" />
 
 </animated-vector>

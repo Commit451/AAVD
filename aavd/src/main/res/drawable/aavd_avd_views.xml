@@ -17,10 +17,10 @@
 
 <animated-vector
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:drawable="@drawable/ic_heart_full_24dp">
+    android:drawable="@drawable/avd_ic_views">
 
     <target
-        android:name="heart"
-        android:animation="@animator/heartbeat" />
+        android:name="pupil"
+        android:animation="@animator/aavd_look_around" />
 
 </animated-vector>

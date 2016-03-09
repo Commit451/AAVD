@@ -41,9 +41,9 @@ public class AAVDPathFragment extends Fragment {
 
     private ArrayList<Vector> getVectors() {
         ArrayList<Vector> vectors = new ArrayList<>();
-        vectors.add(new Vector(getActivity(), "Share", R.drawable.avd_share, R.drawable.avd_share));
-        vectors.add(new Vector(getActivity(), "Add to comments", R.drawable.avd_add_to_comment, R.drawable.avd_add_to_comment));
-        vectors.add(new Vector(getActivity(), "Search/Back", R.drawable.avd_back_to_search, R.drawable.avd_search_to_back));
+        vectors.add(new Vector(getActivity(), "Share", R.drawable.aavd_avd_share, R.drawable.aavd_avd_share));
+        vectors.add(new Vector(getActivity(), "Add to comments", R.drawable.aavd_avd_add_to_comment, R.drawable.aavd_avd_add_to_comment));
+        vectors.add(new Vector(getActivity(), "Search/Back", R.drawable.aavd_avd_back_to_search, R.drawable.aavd_avd_search_to_back));
         return vectors;
     }
 

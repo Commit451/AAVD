@@ -17,10 +17,14 @@
 
 <animated-vector
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:drawable="@drawable/ic_views">
+    android:drawable="@drawable/aavd_ic_share_avd">
 
     <target
-        android:name="pupil"
-        android:animation="@animator/look_around" />
+        android:name="@string/name_dots"
+        android:animation="@animator/aavd_share_dots" />
+
+    <target
+        android:name="@string/name_lines"
+        android:animation="@animator/aavd_share_lines" />
 
 </animated-vector>

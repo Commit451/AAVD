@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Copyright 2015 Google Inc.
+  Copyright 2016 Google Inc.
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -17,14 +17,14 @@
 
 <animated-vector
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:drawable="@drawable/ic_comment_add">
+    android:drawable="@drawable/avd_ic_followers">
 
     <target
-        android:name="@string/comment_add"
-        android:animation="@animator/comment_add_to_lines" />
+        android:name="lefty"
+        android:animation="@animator/aavd_followers_lefty" />
 
     <target
-        android:name="@string/comment_lines_add_group"
-        android:animation="@animator/comment_lines_add_rotate" />
+        android:name="righty"
+        android:animation="@animator/aavd_followers_righty" />
 
 </animated-vector>
