@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <animated-vector
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:drawable="@drawable/aavd_ic_x_24dp">
+    android:drawable="@drawable/aavd_ic_minus_24dp">
 
     <target
-        android:name="plus"
-        android:animation="@animator/aavd_x_to_plus" />
+        android:name="upward"
+        android:animation="@animator/aavd_plus_to_minus" />
 
 </animated-vector>

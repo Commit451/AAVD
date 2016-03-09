@@ -17,7 +17,7 @@
 
 <animated-vector
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:drawable="@drawable/avd_ic_views">
+    android:drawable="@drawable/aavd_ic_views">
 
     <target
         android:name="pupil"

@@ -17,7 +17,7 @@
 
 <animated-vector
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:drawable="@drawable/avd_ic_followers">
+    android:drawable="@drawable/aavd_ic_followers">
 
     <target
         android:name="lefty"
