@@ -42,6 +42,9 @@ public class AAVDFragment extends Fragment {
     private ArrayList<Vector> getVectors() {
         ArrayList<Vector> vectors = new ArrayList<>();
         vectors.add(new Vector(getActivity(), "Play/Reset", R.drawable.avd_play_to_reset, R.drawable.avd_reset_to_play));
+        vectors.add(new Vector(getActivity(), "Views", R.drawable.avd_views, R.drawable.avd_views));
+        vectors.add(new Vector(getActivity(), "Followers", R.drawable.avd_followers, R.drawable.avd_followers));
+        vectors.add(new Vector(getActivity(), "Heart Beat", R.drawable.avd_likes, R.drawable.avd_likes));
         return vectors;
     }
 
