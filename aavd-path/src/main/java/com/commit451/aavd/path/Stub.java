@@ -1,4 +1,4 @@
-package com.commit451.aavd;
+package com.commit451.aavd.path;
 
 /**
  * Need this so that it will build

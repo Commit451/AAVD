@@ -57,7 +57,7 @@ if (drawable instanceof Animatable) {
 }
 ```
 
-This library simply provides the drawable resources for you to use. It is basically a resource only library (no Java code). Its purpose is not to help you keep track of the state of the animations. This should be done in a case by case basis, but most of the time, you just need a single boolean value to keep track of which animation needs to play next. 
+This library simply provides the drawable resources for you to use. It is basically a resource only library (no Java code). Its purpose is not to help you keep track of the state of the animations. This should be done in a case by case basis, but most of the time, you just need a single boolean value to keep track of which animation needs to play next.
 
 License
 --------
