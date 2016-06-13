@@ -1,10 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<animated-vector
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:drawable="@drawable/aavd_ic_x_24dp">
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
 
-    <target
-        android:name="plus"
-        android:animation="@animator/aavd_x_to_plus" />
+    <aapt:attr name="android:drawable">
+        <vector xmlns:android="http://schemas.android.com/apk/res/android"
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportHeight="24.0"
+            android:viewportWidth="24.0">
+
+            <group
+                android:name="plus"
+                android:pivotX="12"
+                android:pivotY="12"
+                android:rotation="45">
+
+                <path
+                    android:fillColor="#FFFFFFFF"
+                    android:pathData="M19,13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+
+            </group>
+        </vector>
+    </aapt:attr>
+
+    <target android:name="plus">
+
+        <aapt:attr name="android:animation">
+
+            <objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+                android:duration="@android:integer/config_mediumAnimTime"
+                android:propertyName="rotation"
+                android:valueFrom="45"
+                android:valueTo="0"
+                android:valueType="floatType" />
+
+        </aapt:attr>
+
+    </target>
 
 </animated-vector>
