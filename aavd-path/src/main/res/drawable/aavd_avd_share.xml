@@ -15,16 +15,104 @@
   limitations under the License.
   -->
 
-<animated-vector
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:drawable="@drawable/aavd_ic_share_avd">
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+                 xmlns:aapt="http://schemas.android.com/aapt">
 
-    <target
-        android:name="@string/name_dots"
-        android:animation="@animator/aavd_share_dots" />
+    <aapt:attr name="android:drawable">
+        <vector
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportHeight="24"
+            android:viewportWidth="24">
 
-    <target
-        android:name="@string/name_lines"
-        android:animation="@animator/aavd_share_lines" />
+            <path
+                android:name="@string/name_dots"
+                android:fillColor="#ffffffff"
+                android:pathData="@string/path_share_dots"/>
+
+            <path
+                android:name="@string/name_lines"
+                android:pathData="@string/path_share_lines"
+                android:strokeColor="#ffffffff"
+                android:strokeLineCap="square"
+                android:strokeWidth="2"/>
+
+        </vector>
+    </aapt:attr>
+
+    <target android:name="@string/name_dots">
+
+        <aapt:attr name="android:animation">
+
+            <set
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:interpolator="@android:interpolator/fast_out_slow_in">
+
+                <objectAnimator
+                    android:duration="@integer/share_duration_collapse"
+                    android:propertyName="pathData"
+                    android:valueFrom="@string/path_share_dots"
+                    android:valueTo="@string/path_share_dots_collapsed"
+                    android:valueType="pathType"/>
+
+                <objectAnimator
+                    android:duration="@integer/share_duration_mid_expand"
+                    android:propertyName="pathData"
+                    android:startOffset="@integer/share_delay_start_expand"
+                    android:valueFrom="@string/path_share_dots_collapsed"
+                    android:valueTo="@string/path_share_dots_mid_expand"
+                    android:valueType="pathType"/>
+
+                <objectAnimator
+                    android:duration="@integer/share_duration_full_expand"
+                    android:propertyName="pathData"
+                    android:startOffset="@integer/share_delay_full_expand"
+                    android:valueFrom="@string/path_share_dots_mid_expand"
+                    android:valueTo="@string/path_share_dots"
+                    android:valueType="pathType"/>
+
+            </set>
+
+        </aapt:attr>
+
+    </target>
+
+    <target android:name="@string/name_lines">
+
+        <aapt:attr name="android:animation">
+
+            <set
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:interpolator="@android:interpolator/fast_out_slow_in">
+
+                <objectAnimator
+                    android:duration="@integer/share_duration_collapse"
+                    android:propertyName="pathData"
+                    android:valueFrom="@string/path_share_lines"
+                    android:valueTo="@string/path_share_lines_collapsed"
+                    android:valueType="pathType"/>
+
+                <objectAnimator
+                    android:duration="@integer/share_duration_mid_expand"
+                    android:propertyName="pathData"
+                    android:startOffset="@integer/share_delay_start_expand"
+                    android:valueFrom="@string/path_share_lines_collapsed"
+                    android:valueTo="@string/path_share_lines_mid_expand"
+                    android:valueType="pathType"/>
+
+                <objectAnimator
+                    android:duration="@integer/share_duration_full_expand"
+                    android:propertyName="pathData"
+                    android:startOffset="@integer/share_delay_full_expand"
+                    android:valueFrom="@string/path_share_lines_mid_expand"
+                    android:valueTo="@string/path_share_lines"
+                    android:valueType="pathType"/>
+
+            </set>
+
+        </aapt:attr>
+
+    </target>
 
 </animated-vector>
