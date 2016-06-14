@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+
+    <aapt:attr name="android:drawable">
+        <vector xmlns:android="http://schemas.android.com/apk/res/android"
+                android:width="24.0dp"
+                android:height="24.0dp"
+                android:viewportHeight="24.0"
+                android:viewportWidth="24.0">
+
+            <group
+                android:name="rotation group"
+                android:pivotX="12"
+                android:pivotY="12">
+
+                <path
+                    android:name="arrow tail"
+                    android:pathData=
+                        "M12,6 c3.9,0 7,3.135 7,7 s-3.135,7 -7,7 -7,-3.135 -7,-7"
+                    android:strokeColor="#FFFFFFFF"
+                    android:strokeWidth="2"
+                    />
+                <group
+                    android:name="arrow head group"
+                    android:pivotX="10.75"
+                    android:pivotY="8.5"
+                    android:rotation="180"
+                    android:scaleX="0.45"
+                    android:scaleY="0.71">
+                    <path
+                        android:fillColor="#FFFFFFFF"
+                        android:pathData="M8,5v14l11,-7z"/>
+                </group>
+            </group>
+        </vector>
+    </aapt:attr>
+
+    <target android:name="arrow tail">
+
+        <aapt:attr name="android:animation">
+
+            <set xmlns:android="http://schemas.android.com/apk/res/android">
+                <objectAnimator
+                    android:duration="400"
+                    android:interpolator="@android:interpolator/accelerate_cubic"
+                    android:propertyName="trimPathEnd"
+                    android:valueFrom="1"
+                    android:valueTo="0"
+                    android:valueType="floatType"/>
+            </set>
+
+        </aapt:attr>
+
+    </target>
+
+    <target android:name="arrow head group">
+
+        <aapt:attr name="android:animation">
+
+            <set xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:ordering="together"
+                >
+                <objectAnimator
+                    android:duration="400"
+                    android:interpolator="@android:interpolator/decelerate_cubic"
+                    android:propertyName="rotation"
+                    android:valueFrom="-180"
+                    android:valueTo="-180"
+                    />
+                <objectAnimator
+                    android:duration="400"
+                    android:interpolator="@android:interpolator/decelerate_cubic"
+                    android:propertyName="scaleX"
+                    android:valueFrom="0.45"
+                    android:valueTo="0.45"
+                    />
+                <objectAnimator
+                    android:duration="400"
+                    android:interpolator="@android:interpolator/decelerate_cubic"
+                    android:propertyName="scaleY"
+                    android:valueFrom="0.71"
+                    android:valueTo="0.71"
+                    />
+            </set>
+
+        </aapt:attr>
+
+    </target>
+
+    <target android:name="arrow head group">
+
+        <aapt:attr name="android:animation">
+
+            <set xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:ordering="together"
+                >
+                <objectAnimator
+                    android:duration="400"
+                    android:interpolator="@android:interpolator/decelerate_cubic"
+                    android:propertyName="rotation"
+                    android:startOffset="400"
+                    android:valueFrom="-180"
+                    android:valueTo="-360"
+                    />
+                <objectAnimator
+                    android:duration="400"
+                    android:interpolator="@android:interpolator/decelerate_cubic"
+                    android:propertyName="scaleX"
+                    android:valueFrom="0.45"
+                    android:valueTo="1"
+                    />
+                <objectAnimator
+                    android:duration="400"
+                    android:interpolator="@android:interpolator/decelerate_cubic"
+                    android:propertyName="scaleY"
+                    android:valueFrom="0.71"
+                    android:valueTo="1"
+                    />
+            </set>
+
+        </aapt:attr>
+
+    </target>
+
+</animated-vector>

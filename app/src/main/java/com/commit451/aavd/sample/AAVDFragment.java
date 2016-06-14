@@ -41,12 +41,12 @@ public class AAVDFragment extends Fragment {
 
     private ArrayList<Vector> getVectors() {
         ArrayList<Vector> vectors = new ArrayList<>();
-        vectors.add(new Vector(getActivity(), "Play/Reset", R.drawable.aavd_avd_play_to_reset, R.drawable.aavd_avd_reset_to_play));
-        vectors.add(new Vector(getActivity(), "Views", R.drawable.aavd_avd_views, R.drawable.aavd_avd_views));
-        vectors.add(new Vector(getActivity(), "Followers", R.drawable.aavd_avd_followers, R.drawable.aavd_avd_followers));
-        vectors.add(new Vector(getActivity(), "Heart Beat", R.drawable.aavd_avd_heartbeat, R.drawable.aavd_avd_heartbeat));
-        vectors.add(new Vector(getActivity(), "Plus/X", R.drawable.aavd_avd_x_to_plus, R.drawable.aavd_avd_plus_to_x));
-        vectors.add(new Vector(getActivity(), "Plus/Minus", R.drawable.aavd_avd_minus_to_plus, R.drawable.aavd_avd_plus_to_minus));
+        vectors.add(new Vector(getActivity(), "Play/Reset", R.drawable.aavd_play_to_reset, R.drawable.aavd_reset_to_play));
+        vectors.add(new Vector(getActivity(), "Views", R.drawable.aavd_views, R.drawable.aavd_views));
+        vectors.add(new Vector(getActivity(), "Followers", R.drawable.aavd_followers, R.drawable.aavd_followers));
+        vectors.add(new Vector(getActivity(), "Heart Beat", R.drawable.aavd_heartbeat, R.drawable.aavd_heartbeat));
+        vectors.add(new Vector(getActivity(), "Plus/X", R.drawable.aavd_x_to_plus, R.drawable.aavd_plus_to_x));
+        vectors.add(new Vector(getActivity(), "Plus/Minus", R.drawable.aavd_minus_to_plus, R.drawable.aavd_plus_to_minus));
 
         return vectors;
     }
